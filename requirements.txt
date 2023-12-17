@@ -1,0 +1,16 @@
+# core
+discord==2.3.2
+requests==2.31.0
+transliterate==1.10.2
+
+# for Google's satisfaction
+aiohttp  # should already be installed by `discord`
+
+# secrets - local
+python-dotenv==1.0.0 
+
+# secrets - cloud
+google-cloud-secret-manager==2.17.0  
+google-crc32c==1.5.0
+
+debugpy # debugging

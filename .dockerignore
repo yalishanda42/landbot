@@ -1,0 +1,5 @@
+.dockerignore
+.vscode
+.idea
+.readmes
+venv
