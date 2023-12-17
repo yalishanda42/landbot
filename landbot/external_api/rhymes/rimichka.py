@@ -6,13 +6,12 @@ import requests
 class RimichkaAPI:
     """Implementations for the https://rimichka.com API."""
 
-    BASE = "http://rimichka.com"
+    BASE = "https://rimichka.com"
 
-    def fetch_rhymes(self, word):
+    def fetch_rhymes(self, word: str) -> list[str]:
         """Return a list with rhymes for a given word."""
         try:
             response = requests.get(f"{self.BASE}/?word={word}&json=1").json()
-            response.raise_for_status()
             response.sort(key=lambda d: d["pri"], reverse=True)
         except Exception:
             response = []
