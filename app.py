@@ -66,6 +66,9 @@ async def start_server(host, port):
 
 
 async def main():
+    from dotenv import load_dotenv
+    load_dotenv()
+    
     secret_name = "DISCORD_TOKEN"
     project_id = "938558679912"
     token = os.getenv(f"{secret_name}") or fetch_google_secret(project_id, secret_name)
